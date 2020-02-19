@@ -4,10 +4,13 @@
 <div fxLayout="column">
     <div
         *ngFor="let block of timeline; let i = index"
-        style="margin-bottom: 16px;width: 40%;"
+        style="margin-bottom: 16px;width: calc(50% - 5px);"
         [fxFlexAlign]="i % 2 === 1 ? 'end' : 'start'"
+        fxLayout="row"
+        fxLayoutAlign="center end"
     >
-        <mat-card>
+        <div class="left-arrow" *ngIf="i % 2 === 1"></div>
+        <mat-card style="width: calc(100% - 20px)">
             <mat-card-content>
                 <div fxLayout="row" fxLayoutAlign="space-between">
                     <h2>
@@ -23,5 +26,6 @@
                 </mat-chip-list>
             </mat-card-content>
         </mat-card>
+        <div *ngIf="i % 2 === 0" class="right-arrow"></div>
     </div>
 </div>

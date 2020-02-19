@@ -1,0 +1,27 @@
+<div
+    style="position:absolute; width: 5px; height: 100%; background-color:gray; left: 50%"
+></div>
+<div fxLayout="column">
+    <div
+        *ngFor="let block of timeline; let i = index"
+        style="margin-bottom: 16px;width: 40%;"
+        [fxFlexAlign]="i % 2 === 1 ? 'end' : 'start'"
+    >
+        <mat-card>
+            <mat-card-content>
+                <div fxLayout="row" fxLayoutAlign="space-between">
+                    <h2>
+                        {{ block.headline }}
+                    </h2>
+                    <small style="color:gray">{{ block.time }}</small>
+                </div>
+                {{ block.description }}
+                <mat-chip-list>
+                    <mat-chip *ngFor="let tag of block.tags">
+                        {{ tag }}
+                    </mat-chip>
+                </mat-chip-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

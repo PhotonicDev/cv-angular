@@ -7,8 +7,9 @@ import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { TimelineModule } from './components/timeline/timeline.module'
-import { StateContext } from '@ngxs/store'
+import { StateContext, NgxsModule } from '@ngxs/store'
 import { NgxsHmrLifeCycle, NgxsHmrSnapshot as Snapshot } from '@ngxs/hmr-plugin'
+import { environment } from 'src/environments/environment'
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -16,6 +17,9 @@ import { NgxsHmrLifeCycle, NgxsHmrSnapshot as Snapshot } from '@ngxs/hmr-plugin'
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
+    NgxsModule.forRoot([], {
+      developmentMode: !environment.production,
+    }),
     FlexLayoutModule,
     TimelineModule,
   ],

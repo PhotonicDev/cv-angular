@@ -1,53 +1,59 @@
-<div style="padding: 16px; height: 100%">
-    <mat-card
-        style="padding-bottom: 50px; margin-top: 150px;"
-        class="mat-elevation-z5"
-    >
-        <img src="" />
-        <img
-            class="profile-img position-above-card mat-elevation-z3"
-            src="../assets/img/morty.gif"
-        />
-        <mat-card-content>
-            <h1 style="text-align: center; margin-top: 100px;">
-                Nerijus Pamedytis
-            </h1>
-            <h2 style="text-align: center;">
-                Frontend engineer @
-                <a href="https://sabienzia.com">Sabienzia Technologies GmbH</a>
-            </h2>
-            <p
-                style="text-align: center; margin-top: 30px; width: 60%; margin-left: auto; margin-right:auto;"
-            >
-                Hello earthlings, I am Nerijus and I am a Frontend developer
-                living in Berlin. I started my deep venture into programming
-                about 6 years ago after transitioning from graphical design and
-                starting to study multimedia design and communication. I love
-                working on cross-platform and cutting edge technologies. And I'm
-                currently on my free time like to tinker on machine learning and
-                deep learning using Tensorflow.
-            </p>
-        </mat-card-content>
-    </mat-card>
-    <h1
-        style="margin-top: 50px; text-align: center; color: gray"
+<div style="padding: 16px; height: 100%;">
+  <mat-card
+    style="padding-bottom: 50px; margin-top: 150px;"
+    class="mat-elevation-z5"
+  >
+    <img src="" />
+    <img
+      class="profile-img position-above-card mat-elevation-z3"
+      src="../assets/img/morty.gif"
+    />
+    <mat-card-content>
+      <h1 style="text-align: center; margin-top: 100px;">
+        Nerijus Pamedytis
+      </h1>
+      <h2 style="text-align: center;">
+        Frontend engineer @
+        <a href="https://sabienzia.com">Sabienzia Technologies GmbH</a>
+      </h2>
+      <p
+        style="text-align: center; margin-top: 30px; width: 60%; margin-left: auto; margin-right:auto;"
+      >
+        Hello earthlings, I am Nerijus and I am a Frontend developer living in
+        Berlin. I started my deep venture into programming about 6 years ago
+        after transitioning from graphical design and starting to study
+        multimedia design and communication. I love working on cross-platform
+        and cutting edge technologies. And I'm currently on my free time like to
+        tinker on machine learning and deep learning using Tensorflow.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <h1
+    style="margin-top: 50px; text-align: center; color: gray"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+  >
+    <mat-icon style="color:gray; margin-right: 5px">work</mat-icon>
+    <span>
+      Experience
+    </span>
+  </h1>
+  <app-timeline [timeline]="timeline"></app-timeline>
+  <mat-card
+    style="padding-bottom: 50px; margin-top: 50px;"
+    class="mat-elevation-z5"
+  >
+    <mat-card-content>
+      <h1
+        style="margin-top: 16px; text-align: center; color: gray"
         fxLayout="row"
         fxLayoutAlign="center center"
-    >
-        <mat-icon style="color:gray; margin-right: 5px">work</mat-icon>
+      >
+        <mat-icon style="color:gray; margin-right: 5px">school</mat-icon>
         <span>
-            Experience
+          Education
         </span>
-    </h1>
-    <div style="height:500px">
-        <app-timeline [timeline]="timeline"></app-timeline>
-    </div>
-    <p>
-        I'm currently really excited about the development of JavaScript and all
-        of its frameworks and libraries built, and in development. I think that
-        JavaScript is unifying lots of fields of computer science, web and
-        mobile development making it way easier for everyone to build and
-        contribute to the projects. And that in a way sums up as well what I
-        really want to work on.
-    </p>
+      </h1>
+    </mat-card-content>
+  </mat-card>
 </div>

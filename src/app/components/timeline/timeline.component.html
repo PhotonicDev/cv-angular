@@ -1,31 +1,33 @@
-<div
-    style="position:absolute; width: 5px; background-color:gray; left: 50%"
-></div>
-<div fxLayout="column">
-    <div
-        *ngFor="let block of timeline; let i = index"
-        style="margin-bottom: 16px;width: calc(50% - 5px);"
-        [fxFlexAlign]="i % 2 === 1 ? 'end' : 'start'"
-        fxLayout="row"
-        fxLayoutAlign="center end"
-    >
-        <div class="left-arrow" *ngIf="i % 2 === 1"></div>
-        <mat-card style="width: calc(100% - 20px)">
-            <mat-card-content>
-                <div fxLayout="row" fxLayoutAlign="space-between">
-                    <h2>
-                        {{ block.headline }}
-                    </h2>
-                    <small style="color:gray">{{ block.time }}</small>
-                </div>
-                {{ block.description }}
-                <mat-chip-list>
-                    <mat-chip *ngFor="let tag of block.tags">
-                        {{ tag }}
-                    </mat-chip>
-                </mat-chip-list>
-            </mat-card-content>
-        </mat-card>
-        <div *ngIf="i % 2 === 0" class="right-arrow"></div>
-    </div>
+<div style="display:grid; grid-template-columns: auto 5px auto;">
+  <div
+    style="background-color:gray; grid-column-start:2;grid-column-end: 3; grid-row-start:1"
+    [ngStyle]="{ 'grid-row-end': timeline.length + 1 }"
+  ></div>
+  <div
+    *ngFor="let block of timeline; let i = index"
+    style="margin-bottom: 16px;"
+    [ngClass]="{ 'right-block': i % 2 === 1, 'left-block': i % 2 !== 1 }"
+    [ngStyle]="{ 'grid-row-start': i + 1, 'grid-row-end': i + 2 }"
+    fxLayout="row"
+    fxLayoutAlign="center end"
+  >
+    <div class="left-arrow" *ngIf="i % 2 === 1"></div>
+    <mat-card style="width: calc(100% - 20px)">
+      <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="space-between">
+          <h2>
+            {{ block.headline }}
+          </h2>
+          <small style="color:gray">{{ block.time }}</small>
+        </div>
+        {{ block.description }}
+        <mat-chip-list>
+          <mat-chip *ngFor="let tag of block.tags">
+            {{ tag }}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-card-content>
+    </mat-card>
+    <div *ngIf="i % 2 === 0" class="right-arrow"></div>
+  </div>
 </div>

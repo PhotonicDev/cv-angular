@@ -47,5 +47,5 @@ testem.log
 Thumbs.db
 
 # Deployment files
-.firbase
+.firebase
 functions

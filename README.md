@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
+## Deployed version
+
+[https://cv-angular-619ef.firebaseapp.com/](https://cv-angular-619ef.firebaseapp.com/)
+
 ## Project setup
 
 - [HMR](https://www.ngxs.io/plugins/hmr)

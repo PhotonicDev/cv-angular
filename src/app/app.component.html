@@ -39,21 +39,18 @@
     </span>
   </h1>
   <app-timeline [timeline]="timeline"></app-timeline>
-  <mat-card
-    style="padding-bottom: 50px; margin-top: 50px;"
-    class="mat-elevation-z5"
+  <h1
+    style="margin-top: 16px; text-align: center; color: gray"
+    fxLayout="row"
+    fxLayoutAlign="center center"
   >
-    <mat-card-content>
-      <h1
-        style="margin-top: 16px; text-align: center; color: gray"
-        fxLayout="row"
-        fxLayoutAlign="center center"
-      >
-        <mat-icon style="color:gray; margin-right: 5px">school</mat-icon>
-        <span>
-          Education
-        </span>
-      </h1>
-    </mat-card-content>
-  </mat-card>
+    <mat-icon style="color:gray; margin-right: 5px">school</mat-icon>
+    <span>
+      Education
+    </span>
+  </h1>
+  <div style="max-width: 1000px; margin: 0 auto">
+    <app-edu-card *ngFor="let education of educations" [cardData]="education">
+    </app-edu-card>
+  </div>
 </div>

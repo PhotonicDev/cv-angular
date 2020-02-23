@@ -1,8 +1,20 @@
-<div style="display:grid; grid-template-columns: auto 5px auto;">
+<div
+  style="display:grid; grid-template-columns: auto 5px auto; max-width: 1000px; margin: 0 auto;"
+>
   <div
-    style="background-color:gray; grid-column-start:2;grid-column-end: 3; grid-row-start:1"
+    class="fading-gradient"
+    style="grid-column-start:2;grid-column-end: 3; grid-row-start:1"
     [ngStyle]="{ 'grid-row-end': timeline.length + 1 }"
-  ></div>
+  >
+    <span
+      style="background-color: orange; height: 20px; width: 20px; position: absolute; z-index: 5; border-radius: 50%; left: calc(50% - 3px);"
+    >
+    </span>
+    <span
+      style="background-color: orange; height: 20px; width: 20px; position: absolute; z-index: 5; border-radius: 50%; left: calc(50% - 3px);"
+    >
+    </span>
+  </div>
   <div
     *ngFor="let block of timeline; let i = index"
     style="margin-bottom: 16px;"

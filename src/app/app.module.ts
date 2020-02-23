@@ -10,6 +10,8 @@ import { TimelineModule } from './components/timeline/timeline.module'
 import { StateContext, NgxsModule } from '@ngxs/store'
 import { NgxsHmrLifeCycle, NgxsHmrSnapshot as Snapshot } from '@ngxs/hmr-plugin'
 import { environment } from 'src/environments/environment'
+import { EduCardComponent } from './components/edu-card/edu-card.component'
+import { EduCardModule } from './components/edu-card/edu-card.module'
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -17,6 +19,7 @@ import { environment } from 'src/environments/environment'
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
+    EduCardModule,
     NgxsModule.forRoot([], {
       developmentMode: !environment.production,
     }),

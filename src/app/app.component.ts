@@ -6,6 +6,26 @@ import { Component } from '@angular/core'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  educations = [
+    {
+      school: 'Business Academy South West, Denmark',
+      year: '2016 - 2018',
+      degree: 'Bachelor, Web development',
+      description: 'Studying some programming',
+    },
+    {
+      school: 'Business Academy South West, Denmark',
+      year: '2014 - 2016',
+      degree: 'AP degree, Multimedia Graphical Design & Communication ',
+      description: 'Studying some programming design and communication',
+    },
+    {
+      school: 'Siauliai Vocational Training Centre, Lithuania',
+      degree: 'Visual Advertising and Graphical Design',
+      year: '2010 - 2013',
+      description: 'Studying graphical design',
+    },
+  ]
   timeline = [
     {
       headline: 'Sabienzia Technologies',

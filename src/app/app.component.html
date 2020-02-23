@@ -53,4 +53,22 @@
     <app-edu-card *ngFor="let education of educations" [cardData]="education">
     </app-edu-card>
   </div>
+  <h1
+    style="margin-top: 50px; text-align: center; color: gray"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+  >
+    <mat-icon style="color:gray; margin-right: 5px">assessment</mat-icon>
+    <span>
+      Skills
+    </span>
+  </h1>
+  <div
+    style="max-width: 1000px; margin: 0 auto;display:grid; grid-template-columns: auto auto;"
+  >
+    <app-item-rating
+      *ngFor="let rating of ratings"
+      [itemRating]="rating"
+    ></app-item-rating>
+  </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { ItemRating } from './components/item-rating/item-rating'
 
 @Component({
   selector: 'app-root',
@@ -58,6 +59,16 @@ export class AppComponent {
         // tslint:disable-next-line: max-line-length
         'Worked as Freelance developer under a contract for maintenance and further development of an older Umbraco system. Developing ticketing and registration systems for live events for Wordpress based websites',
       tags: ['Wordpress', 'Umbraco', 'PHP', '.Net'],
+    },
+  ]
+  ratings: ItemRating[] = [
+    {
+      skill: 'Javascript',
+      rating: 5,
+    },
+    {
+      skill: 'Typescript/Angular',
+      rating: 3,
     },
   ]
 }

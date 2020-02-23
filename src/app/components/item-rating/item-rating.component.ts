@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
+import { ItemRating } from './item-rating'
 
 @Component({
   selector: 'app-item-rating',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./item-rating.component.scss'],
 })
 export class ItemRatingComponent implements OnInit {
+  @Input() itemRating: ItemRating
   constructor() {}
 
   ngOnInit(): void {}

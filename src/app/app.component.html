@@ -1,33 +1,37 @@
+<star-rating starType="svg" [rating]="2"></star-rating>
+
 <div style="padding: 16px; height: 100%;">
-  <mat-card
-    style="padding-bottom: 50px; margin-top: 150px;"
-    class="mat-elevation-z5"
-  >
-    <img src="" />
-    <img
-      class="profile-img position-above-card mat-elevation-z3"
-      src="../assets/img/morty.gif"
-    />
-    <mat-card-content>
-      <h1 style="text-align: center; margin-top: 100px;">
-        Nerijus Pamedytis
-      </h1>
-      <h2 style="text-align: center;">
-        Frontend engineer @
-        <a href="https://sabienzia.com">Sabienzia Technologies GmbH</a>
-      </h2>
-      <p
-        style="text-align: center; margin-top: 30px; width: 60%; margin-left: auto; margin-right:auto;"
-      >
-        Hello earthlings, I am Nerijus and I am a Frontend developer living in
-        Berlin. I started my deep venture into programming about 6 years ago
-        after transitioning from graphical design and starting to study
-        multimedia design and communication. I love working on cross-platform
-        and cutting edge technologies. And I'm currently on my free time like to
-        tinker on machine learning and deep learning using Tensorflow.
-      </p>
-    </mat-card-content>
-  </mat-card>
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <mat-card
+      style="padding-bottom: 50px; margin-top: 150px;"
+      class="mat-elevation-z5"
+    >
+      <img src="" />
+      <img
+        class="profile-img position-above-card mat-elevation-z3"
+        src="../assets/img/morty.gif"
+      />
+      <mat-card-content>
+        <h1 style="text-align: center; margin-top: 100px;">
+          Nerijus Pamedytis
+        </h1>
+        <h2 style="text-align: center;">
+          Frontend engineer @
+          <a href="https://sabienzia.com">Sabienzia Technologies GmbH</a>
+        </h2>
+        <p
+          style="text-align: center; margin-top: 30px; width: 60%; margin-left: auto; margin-right:auto;"
+        >
+          Hello earthlings, I am Nerijus and I am a Frontend developer living in
+          Berlin. I started my deep venture into programming about 6 years ago
+          after transitioning from graphical design and starting to study
+          multimedia design and communication. I love working on cross-platform
+          and cutting edge technologies. And I'm currently on my free time like
+          to tinker on machine learning and deep learning using Tensorflow.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
   <h1
     style="margin-top: 50px; text-align: center; color: gray"
     fxLayout="row"
@@ -64,7 +68,7 @@
     </span>
   </h1>
   <div
-    style="max-width: 1000px; margin: 0 auto;display:grid; grid-template-columns: auto auto;"
+    style="max-width: 1000px; margin: 0 auto;display:grid; grid-template-columns: calc(50% - 8px) calc(50% - 8px); grid-gap:16px; padding-bottom: 16px;"
   >
     <app-item-rating
       *ngFor="let rating of ratings"

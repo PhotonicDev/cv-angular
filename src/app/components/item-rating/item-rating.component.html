@@ -1,7 +1,40 @@
 <mat-card>
   <mat-card-content>
-    <h2>
+    <h2 style="text-align: center;">
       {{ itemRating.skill }}
     </h2>
+    <div
+      [ngClass]="'value-' + itemRating.rating"
+      class="rating large star-icon color-default label-top"
+    >
+      <!-- <div class="label-value">{{ itemRating.rating }}</div> -->
+      <div class="star-container">
+        <div class="star">
+          <i class="star-empty"></i>
+          <i class="star-half"></i>
+          <i class="star-filled"></i>
+        </div>
+        <div class="star">
+          <i class="star-empty"></i>
+          <i class="star-half"></i>
+          <i class="star-filled"></i>
+        </div>
+        <div class="star">
+          <i class="star-empty"></i>
+          <i class="star-half"></i>
+          <i class="star-filled"></i>
+        </div>
+        <div class="star">
+          <i class="star-empty"></i>
+          <i class="star-half"></i>
+          <i class="star-filled"></i>
+        </div>
+        <div class="star">
+          <i class="star-empty"></i>
+          <i class="star-half"></i>
+          <i class="star-filled"></i>
+        </div>
+      </div>
+    </div>
   </mat-card-content>
 </mat-card>

@@ -1,23 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-
-html {
-}
+@import '~css-star-rating/css/star-rating';
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: lightgray;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
 }
 body {
-    margin: 0;
-    font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .profile-img {
-    border-radius: 50%;
-    max-width: 150px;
-    max-height: 150px;
-    background-size: cover;
-    border: 3px solid white;
+  border-radius: 50%;
+  max-width: 150px;
+  max-height: 150px;
+  background-size: cover;
+  border: 3px solid white;
 }

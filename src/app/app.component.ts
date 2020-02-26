@@ -70,5 +70,13 @@ export class AppComponent {
       skill: 'Typescript/Angular',
       rating: 3,
     },
+    {
+      skill: 'PHP',
+      rating: 3,
+    },
+    {
+      skill: 'CSS3/HTML5',
+      rating: 5,
+    },
   ]
 }
